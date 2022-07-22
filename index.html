@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- 
+    Projeto Buscador de CEP com (HTML, CSS e JavaScript)
+    > www.devmentor.com.br
+  -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Carregando a fonte roboto para usar no projeto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Buscador de CEP </title>
+  <meta name="descripiton" content="Encontre o seu CEP">
+  <link rel="stylesheet" href="style.css">
+<body>
+  
+  <main>
+    <div class="container">
+      <h1>Buscador CEP</h1>
+      <form autocomplete="off">
+        <label for="buscarCep"></label>
+        <input type="text" name="buscarCep" id="buscarCep" placeholder="Digite seu CEP..." maxlength="8">
+      </form>
+    </div>
+
+    <div class="resposta" >
+      <input  type="text" name="cep" id="cep">
+      <input  type="text" name="logradouro" id="logradouro">
+      <input  type="text" name="bairro" id="bairro">
+      <input  type="text" name="localidade" id="localidade">
+      <input type="text" name="uf" id="estado">
+    </div>
+  </main>
+
+  <script type="text/javascript" src=script.js></script>
+</body>
+</html>
