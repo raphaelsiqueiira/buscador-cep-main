@@ -3,15 +3,17 @@ let cep = document.querySelector('#cep');
 let rua = document.querySelector('#logradouro');
 let bairro = document.querySelector('#bairro');
 let cidade = document.querySelector('#localidade');
-let estado = document.querySelector('#estado');
-
+let complemento = document.querySelector('#complemento');
 
 
 buscarCep.addEventListener('blur', function(e){
     let buscarCep = e.target.value;
     let script = document.createElement('script');
+    const aparecer = document.querySelector('.resposta');
     script.src = 'https://viacep.com.br/ws/'+buscarCep+'/json/?callback=popularform';
     document.body.appendChild(script);
+    aparecer.style.display = "flex";
+
 });
 
 function popularform(resposta) {
@@ -20,9 +22,10 @@ function popularform(resposta) {
         return;
     }
     
-    cep.value = resposta.cep;
-    rua.value = resposta.logradouro;
-    bairro.value = resposta.bairro;
-    cidade.value = resposta.localidade;
-    estado.value = resposta.uf;
+    cep.value = "CEP: "+ resposta.cep;
+    complemento.value = "Complemento: " + resposta.complemento
+    rua.value = "Rua: " + resposta.logradouro;
+    bairro.value = "Bairro: " + resposta.bairro;
+    cidade.value = resposta.localidade + "-" + resposta.uf;
+    
 }

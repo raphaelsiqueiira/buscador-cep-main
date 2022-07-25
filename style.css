@@ -15,6 +15,7 @@ body{
   flex-direction: column;
 
   background-image: linear-gradient(to bottom, #121212, #212B46 );
+  background-attachment: fixed;
   color: #FFFFFF;
 }
 main{
@@ -55,11 +56,54 @@ h1{
   color: rgb(255, 255, 255, 50%);
 }
 
+label{
+  position: relative;
+}
+
+.btn-icon{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0px 10px;
+  background: transparent;
+  color: rgb(255, 255, 255, 50%);
+  font-size: 1.4em;
+
+}
+
+.resposta{
+  display: none;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  
+
+  background-color: #FFFFFF;
+  color: #121212;
+  padding: 10px 0px;
+  margin-top: 6vh;
+  border-radius: 7px;
+  width: 36vw;
+
+}
+
+.form-resposta{
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+  border-radius: 7px;
+  background: transparent;
+  font-weight: bold;
+}
+
+#cep{
+  padding-bottom: 20px;
+  font-size: 2em;
+}
+
 
 @media(max-width:912px){
-  body{
-    height: 90vh;
-  }
 
   h1{
     flex-wrap: nowrap;
@@ -68,6 +112,10 @@ h1{
 
   #buscarCep{
     width: 90vw;
+  }
+
+  .resposta{
+    width:90vw;
   }
 
 }
